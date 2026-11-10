@@ -1,0 +1,94 @@
+
+<!-- Contenedor principal de la pantalla de consulta. -->
+<div class="container mt-4 mb-5">
+
+  <!-- Título y descripción de la pantalla. -->
+  <div class="text-center mb-4">
+    <h2>Tipos de Sistemas</h2>
+    <p>Administración de tipos de sistemas</p>
+  </div>
+
+  <!-- Tarjeta que contiene la tabla de registros. -->
+  <div class="card shadow-sm">
+
+    <!-- Encabezado de la tarjeta. -->
+    <div class="card-header">
+      <h5 class="mb-0">Tipos de sistemas registrados</h5>
+    </div>
+
+    <!-- Cuerpo de la tarjeta. -->
+    <div class="card-body">
+
+      <!-- Permite que la tabla se adapte a pantallas pequeñas. -->
+      <div class="table-responsive">
+
+        <!-- Tabla donde se muestran los tipos de sistemas. -->
+        <table class="table table-bordered table-hover">
+
+          <!-- Encabezados de las columnas. -->
+          <thead class="thead-dark">
+            <tr>
+              <th>Nombre</th>
+              <th>Descripción</th>
+              <th>Categoría</th>
+              <th>Estado</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+
+          <!-- Cuerpo de la tabla. -->
+          <tbody>
+
+            <!-- Recorremos la lista de tipos de sistemas obtenida del servicio. -->
+            <!-- track tipo.id permite identificar cada registro mediante su ID único. -->
+            @for (tipo of tipoSistemaService.tiposSistemas(); track tipo.id) {
+
+              <!-- Cada fila representa un tipo de sistema registrado. -->
+              <tr>
+
+                <!-- Mostramos los datos de cada registro. -->
+                <td>{{ tipo.nombre }}</td>
+                <td>{{ tipo.descripcion }}</td>
+                <td>{{ tipo.categoria }}</td>
+                <td>{{ tipo.estado }}</td>
+
+                <!-- Botones para realizar acciones sobre el registro. -->
+                <td>
+
+                  <!-- Botón para navegar al formulario de actualización. -->
+                  <!-- Enviamos el ID del registro seleccionado. -->
+                  <a
+                    class="btn btn-warning btn-sm"
+                    [routerLink]="['/actualiza', tipo.id]">
+                    Editar
+                  </a>
+
+                  <!-- Botón que llama al método para eliminar el registro. -->
+                  <!-- Enviamos el ID para identificar cuál se desea eliminar. -->
+                  <button
+                    type="button"
+                    class="btn btn-danger btn-sm ml-1"
+                    (click)="eliminarTipoSistema(tipo.id)">
+                    Eliminar
+                  </button>
+
+                </td>
+              </tr>
+
+            } @empty {
+
+              <!-- Este mensaje aparece cuando no existen registros. -->
+              <tr>
+                <td colspan="5" class="text-center">
+                  No hay tipos de sistemas registrados.
+                </td>
+              </tr>
+
+            }
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

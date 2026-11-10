@@ -1,0 +1,161 @@
+/* FONDO PRINCIPAL SAKURA */
+.fondo-sakura {
+  min-height: 100vh;
+  padding: 30px 0;
+  background-color: var(--color-fondo);
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+/* LLUVIA DE PETALOS */
+.lluvia-petalos {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+/* APARIENCIA DE LOS PETALOS */
+.petalo {
+  position: absolute;
+  top: -30px;
+  display: block;
+  width: 14px;
+  height: 19px;
+  background: var(--color-rosa);
+  border-radius: 2px 80% 2px 80%;
+  opacity: .8;
+  animation: caer-petalo 12s linear infinite;
+}
+
+/* POSICIONES Y TAMAÑOS */
+.petalo:nth-child(1) {
+  left: 5%;
+  animation-delay: 0s;
+}
+
+.petalo:nth-child(2) {
+  left: 15%;
+  width: 10px;
+  height: 15px;
+  animation-delay: 3s;
+}
+
+.petalo:nth-child(3) {
+  left: 25%;
+  animation-delay: 6s;
+}
+
+.petalo:nth-child(4) {
+  left: 35%;
+  width: 12px;
+  height: 17px;
+  animation-delay: 1s;
+}
+
+.petalo:nth-child(5) {
+  left: 45%;
+  animation-delay: 5s;
+}
+
+.petalo:nth-child(6) {
+  left: 55%;
+  width: 11px;
+  height: 16px;
+  animation-delay: 8s;
+}
+
+.petalo:nth-child(7) {
+  left: 65%;
+  animation-delay: 2s;
+}
+
+.petalo:nth-child(8) {
+  left: 75%;
+  width: 12px;
+  height: 17px;
+  animation-delay: 7s;
+}
+
+.petalo:nth-child(9) {
+  left: 85%;
+  animation-delay: 4s;
+}
+
+.petalo:nth-child(10) {
+  left: 95%;
+  width: 10px;
+  height: 15px;
+  animation-delay: 9s;
+}
+
+.petalo:nth-child(11) {
+  left: 40%;
+  width: 9px;
+  height: 14px;
+  animation-delay: 10s;
+}
+
+.petalo:nth-child(12) {
+  left: 90%;
+  animation-delay: 11s;
+}
+
+/* ANIMACION DE CAIDA */
+@keyframes caer-petalo {
+  0% {
+    transform: translateY(-30px) translateX(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(50vh) translateX(35px) rotate(180deg);
+  }
+
+  100% {
+    transform: translateY(110vh) translateX(-25px) rotate(360deg);
+  }
+}
+
+/* CONTENIDO POR ENCIMA DE LOS PETALOS */
+.contenido-sakura {
+  position: relative;
+  z-index: 1;
+}
+
+/* ACCESIBILIDAD */
+@media (prefers-reduced-motion: reduce) {
+  .petalo {
+    animation: none;
+    display: none;
+  }
+}
+
+
+/* BARRA DE NAVEGACION SAKURA */
+.navbar {
+  background-color: #FFF9FB !important;
+  border: 1px solid var(--color-borde);
+  border-radius: 14px;
+  padding: 14px 22px;
+  box-shadow: 0 4px 12px rgba(180, 100, 130, 0.12) !important;
+}
+
+/* NOMBRE DEL SISTEMA */
+.navbar-brand {
+  color: var(--color-titulo) !important;
+  font-weight: bold;
+}
+
+/* ENLACES DEL MENU */
+.navbar .nav-link {
+  color: var(--color-texto) !important;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+/* EFECTO AL PASAR EL CURSOR */
+.navbar .nav-link:hover {
+  color: var(--color-acento) !important;
+}

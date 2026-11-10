@@ -1,0 +1,90 @@
+
+<!-- Contenedor principal de la pantalla de actualización. -->
+<div class="container mt-4 mb-5">
+
+  <!-- Título y descripción de la pantalla. -->
+  <div class="text-center mb-4">
+    <h2>Actualizar tipo de sistema</h2>
+    <p>Modifica los datos del tipo de sistema seleccionado.</p>
+  </div>
+
+  <!-- Tarjeta que contiene el formulario. -->
+  <div class="card shadow-sm">
+
+    <!-- Encabezado de la tarjeta. -->
+    <div class="card-header">
+      <h5 class="mb-0">Datos del sistema</h5>
+    </div>
+
+    <!-- Cuerpo de la tarjeta. -->
+    <div class="card-body">
+
+      <!-- Formulario que ejecuta actualizarTipoSistema al enviarse. -->
+      <form (ngSubmit)="actualizarTipoSistema()">
+
+        <!-- Campo para modificar el nombre del sistema. -->
+        <div class="form-group">
+          <label>Nombre del sistema</label>
+          <input
+            type="text"
+            class="form-control"
+            name="nombre"
+            [(ngModel)]="nombre"
+            required>
+        </div>
+
+        <!-- Campo para modificar la descripción. -->
+        <div class="form-group">
+          <label>Descripción</label>
+          <textarea
+            class="form-control"
+            name="descripcion"
+            [(ngModel)]="descripcion"
+            required></textarea>
+        </div>
+
+        <!-- Campo para seleccionar la categoría del sistema. -->
+        <div class="form-group">
+          <label>Categoría</label>
+          <select
+            class="form-control"
+            name="categoria"
+            [(ngModel)]="categoria"
+            required>
+
+            <!-- Opciones disponibles para la categoría. -->
+            <option value="" disabled>Selecciona una categoría</option>
+            <option value="Escritorio">Escritorio</option>
+            <option value="Web">Web</option>
+            <option value="Móvil">Móvil</option>
+            <option value="Distribuido">Distribuido</option>
+          </select>
+        </div>
+
+        <!-- Campo para modificar el estado del sistema. -->
+        <div class="form-group">
+          <label>Estado</label>
+          <select
+            class="form-control"
+            name="estado"
+            [(ngModel)]="estado">
+
+            <!-- Opciones disponibles para el estado. -->
+            <option value="Activo">Activo</option>
+            <option value="Inactivo">Inactivo</option>
+          </select>
+        </div>
+
+        <!-- Botón que envía el formulario para guardar los cambios. -->
+        <!-- Se deshabilita si falta alguno de los campos obligatorios. -->
+        <button
+          type="submit"
+          class="btn btn-primary"
+          [disabled]="!nombre || !descripcion || !categoria">
+          Actualizar
+        </button>
+
+      </form>
+    </div>
+  </div>
+</div>

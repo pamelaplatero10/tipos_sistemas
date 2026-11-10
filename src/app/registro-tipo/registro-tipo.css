@@ -1,0 +1,58 @@
+
+/* TITULO DE REGISTRO */
+h2 {
+  color: var(--color-titulo);
+  font-weight: bold;
+}
+
+/* SUBTITULO */
+p {
+  color: var(--color-texto);
+}
+
+/* TARJETA DEL FORMULARIO */
+.card {
+  background-color: var(--color-superficie);
+  border: 1px solid var(--color-borde);
+  border-radius: 16px;
+}
+
+/* ENCABEZADO DE LA TARJETA */
+.card-header {
+  background-color: #FCE1EA;
+  border-bottom: 1px solid var(--color-borde);
+  color: var(--color-titulo);
+}
+
+/* ETIQUETAS */
+label {
+  color: var(--color-titulo);
+  font-weight: 500;
+}
+
+/* CAMPOS DEL FORMULARIO */
+.form-control {
+  background-color: var(--color-campo);
+  border: 1px solid var(--color-borde);
+  color: var(--color-texto);
+  border-radius: 8px;
+}
+
+/* CUANDO SE SELECCIONA UN CAMPO */
+.form-control:focus {
+  background-color: #FFFFFF;
+  border-color: var(--color-acento);
+  box-shadow: 0 0 0 0.2rem rgba(215, 122, 155, 0.18);
+}
+
+/* BOTON REGISTRAR */
+.btn-primary {
+  background-color: var(--color-acento);
+  border-color: var(--color-acento);
+  color: #FFFFFF;
+}
+
+.btn-primary:hover {
+  background-color: #BD6486;
+  border-color: #BD6486;
+}

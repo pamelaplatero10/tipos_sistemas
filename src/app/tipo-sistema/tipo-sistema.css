@@ -1,0 +1,73 @@
+
+/* TITULO DE CONSULTA */
+h2 {
+  color: var(--color-titulo);
+  font-weight: bold;
+}
+
+/* SUBTITULO */
+p {
+  color: var(--color-texto);
+}
+
+/* TARJETA DE LA TABLA */
+.card {
+  background-color: var(--color-superficie);
+  border: 1px solid var(--color-borde);
+  border-radius: 16px;
+}
+
+/* ENCABEZADO DE LA TARJETA */
+.card-header {
+  background-color: #FCE1EA;
+  border-bottom: 1px solid var(--color-borde);
+  color: var(--color-titulo);
+}
+
+/* TABLA */
+.table {
+  background-color: var(--color-superficie);
+  color: var(--color-texto);
+}
+
+/* ENCABEZADOS DE COLUMNAS */
+.table thead th {
+  background-color: var(--color-primario);
+  color: #FFFFFF;
+  border-color: var(--color-borde);
+}
+
+/* CELDAS */
+.table td {
+  border-color: var(--color-borde);
+  vertical-align: middle;
+}
+
+/* EFECTO AL PASAR EL CURSOR */
+.table-hover tbody tr:hover {
+  background-color: #FCE8EF;
+}
+
+/* BOTON EDITAR */
+.btn-warning {
+  background-color: #F3C77B;
+  border-color: #F3C77B;
+  color: #654A32;
+}
+
+.btn-warning:hover {
+  background-color: #E8B65E;
+  border-color: #E8B65E;
+}
+
+/* BOTON ELIMINAR */
+.btn-danger {
+  background-color: #D9829B;
+  border-color: #D9829B;
+  color: #FFFFFF;
+}
+
+.btn-danger:hover {
+  background-color: #C96B89;
+  border-color: #C96B89;
+}

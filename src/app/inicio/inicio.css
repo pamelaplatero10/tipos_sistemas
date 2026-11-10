@@ -1,0 +1,36 @@
+
+/* TITULO PRINCIPAL */
+h1 {
+  color: var(--color-titulo);
+  font-weight: bold;
+}
+
+/* TEXTOS DE BIENVENIDA */
+p {
+  color: var(--color-texto);
+}
+
+/* TARJETAS DE INICIO */
+.card {
+  background-color: var(--color-superficie);
+  border: 1px solid var(--color-borde);
+  border-radius: 16px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* EFECTO AL PASAR EL CURSOR */
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 7px 16px rgba(180, 100, 130, 0.18) !important;
+}
+
+/* TITULOS DE LAS TARJETAS */
+.card-title {
+  color: var(--color-acento);
+  font-weight: bold;
+}
+
+/* DESCRIPCION DE LAS TARJETAS */
+.card-text {
+  color: var(--color-texto);
+}

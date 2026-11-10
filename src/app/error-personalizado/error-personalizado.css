@@ -1,0 +1,41 @@
+
+/* TITULO DE ERROR */
+h1 {
+  color: var(--color-titulo);
+  font-weight: bold;
+}
+
+/* NUMERO 404 */
+h2 {
+  color: var(--color-acento);
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+/* DESCRIPCION */
+p {
+  color: var(--color-texto);
+}
+
+/* BOTON REGRESAR */
+.btn-primary {
+  background-color: var(--color-acento);
+  border-color: var(--color-acento);
+  color: #FFFFFF;
+  border-radius: 8px;
+}
+
+.btn-primary:hover {
+  background-color: #BD6486;
+  border-color: #BD6486;
+}
+
+/* IMAGEN DEL ERROR 404 */
+img {
+  width: 280px;
+  max-width: 100%;
+  height: auto;
+  margin-top: 10px;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(180, 100, 130, 0.18);
+}

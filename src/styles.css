@@ -1,1 +1,116 @@
-/* You can add global styles to this file, and also import other style files */
+
+/* PALETA DE COLORES uwu */
+
+:root {
+  --color-fondo: #FFF1F5;
+  --color-superficie: #FFF9FB;
+  --color-rosa: #F8BBD0;
+  --color-primario: #E8A0B5;
+  --color-acento: #D77A9B;
+  --color-texto: #795568;
+  --color-borde: #F2C6D5;
+
+  --color-titulo: #A65376;
+  --color-campo: #FFF0F5;
+  --color-hover: #F4A6C1;
+}
+
+/* FONDO GENERAL */
+body {
+  margin: 0;
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+}
+
+/* TITULOS */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-titulo);
+}
+
+/* TEXTOS */
+p, label {
+  color: var(--color-texto);
+}
+
+/* TARJETAS */
+.card {
+  background-color: var(--color-superficie);
+  border: 1px solid var(--color-borde);
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(180, 100, 130, 0.10);
+}
+
+.card-header {
+  background-color: #FCE1EA;
+  border-bottom: 1px solid var(--color-borde);
+  color: var(--color-titulo);
+}
+
+/* CAMPOS */
+.form-control {
+  background-color: var(--color-campo);
+  border: 1px solid var(--color-borde);
+  color: var(--color-texto);
+  border-radius: 8px;
+}
+
+.form-control:focus {
+  background-color: #FFFFFF;
+  border-color: var(--color-acento);
+  box-shadow: 0 0 0 0.2rem rgba(215, 122, 155, 0.18);
+}
+
+/* BOTONES PRINCIPALES */
+.btn-primary {
+  background-color: var(--color-acento);
+  border-color: var(--color-acento);
+  color: #FFFFFF;
+}
+
+.btn-primary:hover {
+  background-color: #BD6486;
+  border-color: #BD6486;
+  color: #FFFFFF;
+}
+
+/* BOTON EDITAR */
+.btn-warning {
+  background-color: #F3C77B;
+  border-color: #F3C77B;
+  color: #654A32;
+}
+
+/* BOTON ELIMINAR */
+.btn-danger {
+  background-color: #D9829B;
+  border-color: #D9829B;
+}
+
+/* TABLAS */
+.table {
+  color: var(--color-texto);
+  background-color: var(--color-superficie);
+}
+
+.table thead th {
+  background-color: #E8A0B5;
+  color: #FFFFFF;
+  border-color: var(--color-borde);
+}
+
+.table td {
+  border-color: var(--color-borde);
+}
+
+.table-hover tbody tr:hover {
+  background-color: #FCE8EF;
+}
+
+/* ENLACES */
+a {
+  color: var(--color-acento);
+}
+
+a:hover {
+  color: #A65376;
+}
